@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import Form from "@components/Form"
+import Image from "next/image"
 
 const CreatePrompt = () => {
     
@@ -42,13 +43,46 @@ const CreatePrompt = () => {
     }
 
     return (
-        <Form
-            type="Create" 
-            post={post}
-            setPost={setPost}
-            submitting={submitting}
-            handleSubmit={createPrompt}
-        />
+        <div className="flex flex-row space-x-52">
+            <div className="w-full">
+                <Form
+                    type="Create" 
+                    post={post}
+                    setPost={setPost}
+                    submitting={submitting}
+                    handleSubmit={createPrompt}
+                />
+            </div>
+            {/* <div class="grid grid-rows-3 grid-flow-col gap-4">
+                <div class="row-span-3">
+                    <Image 
+                        src="/assets/images/prompt1.png"
+                        alt="PromptophyAI Logo"
+                        width={1000}
+                        height={1000}    
+                        className="rounded-lg"            
+                    />
+                </div>
+                <div class="col-span-2">
+                    <Image 
+                        src="/assets/images/prompt2.png"
+                        alt="PromptophyAI Logo"
+                        width={1800}
+                        height={1800}    
+                        className="rounded-lg"            
+                    />
+                </div>
+                <div class="col-span-2 row-span-2">
+                    <Image 
+                        src="/assets/images/prompt3.png"
+                        alt="PromptophyAI Logo"
+                        width={1800}
+                        height={1800}    
+                        className="rounded-lg"            
+                    />
+                </div>
+            </div> */}
+        </div>
     )
 }
 
