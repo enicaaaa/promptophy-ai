@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Form from "@components/Form"
+import { Suspense } from "react"
 
 const EditPrompt = () => {
     
@@ -73,4 +74,12 @@ const EditPrompt = () => {
     )
 }
 
-export default EditPrompt
+const Page = () => {
+    return (
+        <Suspense>
+            <EditPrompt />
+        </Suspense>
+    )
+}
+
+export default Page
