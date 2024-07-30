@@ -1,16 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
+import { useSession } from "next-auth/react"
 import Form from "@components/Form"
-import Image from "next/image"
 
 const CreatePrompt = () => {
-    
+
     const router = useRouter();
     const { data: session } = useSession();
-
     const [submitting, setSubmitting] = useState(false);
     const [post, setPost] = useState({
         prompt: '',
@@ -53,35 +51,7 @@ const CreatePrompt = () => {
                     handleSubmit={createPrompt}
                 />
             </div>
-            {/* <div class="grid grid-rows-3 grid-flow-col gap-4">
-                <div class="row-span-3">
-                    <Image 
-                        src="/assets/images/prompt1.png"
-                        alt="PromptophyAI Logo"
-                        width={1000}
-                        height={1000}    
-                        className="rounded-lg"            
-                    />
-                </div>
-                <div class="col-span-2">
-                    <Image 
-                        src="/assets/images/prompt2.png"
-                        alt="PromptophyAI Logo"
-                        width={1800}
-                        height={1800}    
-                        className="rounded-lg"            
-                    />
-                </div>
-                <div class="col-span-2 row-span-2">
-                    <Image 
-                        src="/assets/images/prompt3.png"
-                        alt="PromptophyAI Logo"
-                        width={1800}
-                        height={1800}    
-                        className="rounded-lg"            
-                    />
-                </div>
-            </div> */}
+
         </div>
     )
 }

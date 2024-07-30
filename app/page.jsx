@@ -10,7 +10,7 @@ const Home = () => {
         </h1>
 
         <p className="desc text-center">
-            PromptophyAI is an open-source AI prompting tool for modern world to discover, create, share and send creative prompts
+            PromptophyAI is an open-source AI prompting tool for modern world to discover, create, share and send creative prompts.
         </p>
 
         {/* Feed component */}
